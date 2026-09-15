@@ -2,11 +2,11 @@
 
 ### Start with an AI second brain. Explore a more human-centered Agent OS.
 
-**FridayOS 1.0 is an open-source practice project from [Robinson AI Lab](https://github.com/Neusoft-Intelligent-Laboratory), formerly named FridayOS-Lite.** It continues to evolve from the original knowledge-management practice.
+**FridayOS 1.0 is an open-source practice project from [Robinson AI Lab](https://github.com/Robinson-AI-Lab), formerly named FridayOS-Lite.** It continues to evolve from the original knowledge-management practice.
 
 Robinson is a public-interest AI research community focused on AI management concepts, practical experiments, and open sharing. FridayOS is our flagship initiative for connecting human knowledge, experience, and action with AI.
 
-English · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md) · [Questions and feedback](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)
+English · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md) · [Questions and feedback](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues)
 
 ## What this version provides
 
@@ -95,7 +95,7 @@ Model costs depend on the provider, model, context size, and usage. Evaluate cos
 
 
 
-Bug reports and questions are welcome on the [Issues](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues) page.
+Bug reports and questions are welcome on the [Issues](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) page.
 
 ---
 

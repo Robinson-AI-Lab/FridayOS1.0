@@ -9,7 +9,7 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-REPO = os.environ.get("GITHUB_REPOSITORY", "Neusoft-Intelligent-Laboratory/FridayOS1.0")
+REPO = os.environ.get("GITHUB_REPOSITORY", "Robinson-AI-Lab/FridayOS1.0")
 SNAPSHOTS = Path("docs/data/star-history.csv")
 OUTPUT = Path("docs/images/star-history.svg")
 WIDTH, HEIGHT = 900, 420

@@ -2,11 +2,11 @@
 
 ### 从一个 AI 第二大脑开始，探索更亲和人的 Agent OS。
 
-**FridayOS 1.0 是[鲁滨逊 · Robinson AI Lab](https://github.com/Neusoft-Intelligent-Laboratory)的开源实践项目，原名 FridayOS-Lite。** 项目在原有知识管理实践的基础上持续演进。
+**FridayOS 1.0 是[鲁滨逊 · Robinson AI Lab](https://github.com/Robinson-AI-Lab)的开源实践项目，原名 FridayOS-Lite。** 项目在原有知识管理实践的基础上持续演进。
 
 鲁滨逊由对 AI 感兴趣、愿意持续投入研究的伙伴组成，以公益分享与共同学习为宗旨，研究 AI 管理的理论概念及应用实践。FridayOS 是我们的主打产品：让 AI 更自然地进入人的知识、经验与行动过程。
 
-简体中文 · [English](./README.md) · [实验室介绍](./LAB.md) · [反馈与讨论](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)
+简体中文 · [English](./README.md) · [实验室介绍](./LAB.zh-CN.md) · [反馈与讨论](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues)
 
 ## 这一版可以做什么
 
@@ -94,12 +94,12 @@ VKM 就是 Friday 的核心，FridayOS 1.0 是它最小的完整形态。也坦�
 | DeepSeek V4 | 便宜免翻墙的模型 | [platform.deepseek.com](https://platform.deepseek.com) |
 | Claudian | 让 AI 住进 Obsidian | Obsidian 社区插件 |
 
-## 💬 卡住了？来群里问
+## 💬 问题与反馈
 
 
 
 
-交流群二维码即将放出。也欢迎在本仓库提 [Issue](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)。
+欢迎在本仓库提 [Issue](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues)。
 
 ---
 
