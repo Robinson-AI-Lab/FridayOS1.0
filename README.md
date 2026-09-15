@@ -1,38 +1,24 @@
-<div align="center">
+# FridayOS 1.0
 
-<img src="./docs/images/hero.gif" alt="FridayOS-Lite — your AI second brain, built by itself" width="100%" />
+### Start with an AI second brain. Explore a more human-centered Agent OS.
 
-# 🤖 FridayOS‑Lite
+**FridayOS 1.0 is an open-source practice project from [Robinson AI Lab](https://github.com/Neusoft-Intelligent-Laboratory), formerly named FridayOS-Lite.** It continues to evolve from the original knowledge-management practice.
 
-### One document, one sentence, one AI second brain
+Robinson is a public-interest AI research community focused on AI management concepts, practical experiments, and open sharing. FridayOS is our flagship initiative for connecting human knowledge, experience, and action with AI.
 
-**No tech skills. No template to download.** Install the Obsidian + Claudian five-tool stack,
-drop one Brain Blueprint file into a folder, say one sentence —
-and the AI builds your second brain, **Friday**, by itself.
+English · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md) · [Questions and feedback](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)
 
-English · [简体中文](./README.zh-CN.md)
+## What this version provides
 
-![No VPN](https://img.shields.io/badge/No_VPN-✓-10B981?style=flat-square) ![Cheap](https://img.shields.io/badge/pennies-DeepSeek_V4-4F46E5?style=flat-square) ![~30 min](https://img.shields.io/badge/~30_min_setup-22D3EE?style=flat-square) ![License: MIT](https://img.shields.io/badge/License-MIT-7C3AED?style=flat-square)
+Use **Obsidian + Claudian**, local Markdown files, and a brain blueprint to explore AI-assisted personal knowledge management: capturing notes, organizing information, retrieving context, and learning a six-region knowledge structure. Setup guides and a fictional demo provide a practical starting point.
 
-<sub>Built by Neusoft Intelligence Lab · Want the agent-operated full version (auto-capture + mechanical safeguards)? See <a href="https://github.com/Neusoft-Intelligent-Laboratory/FridayOS">FridayOS</a></sub>
+This version focuses on personal knowledge management. A Feishu bot, automated message capture, and a complete set of operational safeguards are outside its current scope. Broader task collaboration and Agent OS capabilities remain ongoing research directions.
 
-</div>
+By **Agent OS**, we mean a collaboration environment connecting AI agents, knowledge, tools, and tasks. Our aim is to make that environment approachable, understandable, and respectful of human judgment and control.
 
----
+## Who it is for
 
-## What Lite is — and isn't
-
-**Lite focuses on one thing: teaching you to manage a knowledge base with Obsidian + Claudian** — the body of Friday's second brain. Learn the six-region partition idea, and let the AI capture, organize, and retrieve for you. Daily and weekly plans you write by hand in Obsidian, or dictate to Friday in chat.
-
-It does **not** do automated integrations: no Feishu bot, no capture-from-anywhere messaging, and no mechanical safeguards (lint health checks, memory decay, inbound security). Those belong to the full [FridayOS](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS) — where the AI doesn't just take notes for you, it **runs the whole brain under a contract**. Once the partition idea clicks, your folder moves over as-is. Zero migration.
-
-**Lite is for people who:**
-- Have never heard of Claude or Obsidian and don't know where to download them
-- Freeze at words like "command line" or "environment variable"
-- Don't want a VPN or a foreign-currency subscription
-- Just want an AI that remembers, organizes, and answers
-
-> If you can click a mouse and copy-paste one line, you can install it. ✅
+People curious about AI who want help remembering, organizing, and finding information, and are willing to follow a guide and share what they learn. Prior software-development experience is not required.
 
 ## In three lines
 
@@ -44,11 +30,11 @@ It does **not** do automated integrations: no Feishu bot, no capture-from-anywhe
 
 You've heard of vibe coding — say what you want, the AI writes the code. **Vibe Knowledge Management (VKM)** is the same move applied to knowledge: **drive your knowledge base with natural language, and let the AI do the managing.** You never create folders, tag notes, or fix links by hand. You just talk — capture a stray thought, ask a question, say "the usual" — and filing, linking, and retrieval are Friday's job.
 
-VKM is the core of Friday, and Lite is its smallest complete form. Fair notice: this is a new way of working — how well it replicates beyond us, and how quickly newcomers internalize it, still needs more users to verify. **That's exactly what this repo is for.**
+VKM is the core of Friday, and FridayOS 1.0 is its smallest complete form. Fair notice: this is a new way of working — how well it replicates beyond us, and how quickly newcomers internalize it, still needs more users to verify. **That's exactly what this repo is for.**
 
 ## 🗺️ How it fits together
 
-![FridayOS-Lite — five tools, one signal chain](./docs/images/tools-flow.gif)
+![FridayOS 1.0 — five tools, one signal chain](./docs/images/tools-flow.gif)
 
 > Indigo = what you touch; teal = what thinks beneath. See [`TOOLS.md`](./TOOLS.md) for what each tool is and why.
 
@@ -77,7 +63,7 @@ Six regions, fully explained in [`FRIDAY-BLUEPRINT.md`](./FRIDAY-BLUEPRINT.md):
 
 ## 🎮 Just installed and feeling lost? Play the demo brain
 
-An empty brain is hard to appreciate. We ship a **ready-to-play sandbox** — a fictional 100-person IT company with full employee files, projects, customers, all wikilinked across the six regions, plus 11 demo prompts in three acts that each show something a free chatbot window cannot do. To play: download [`示例大脑-云栈科技.zip`](./示例大脑-云栈科技.zip) (click the ⬇ download button), unzip, open as a vault, follow the demo manual inside. *(Demo content is Chinese-only.)*
+An empty brain is hard to appreciate. We ship a **ready-to-play sandbox** — a fictional 100-person IT company with full employee files, projects, customers, all wikilinked across the six regions, plus 11 demo prompts in three acts for exploring retrieval and cross-file analysis. To play: download [`示例大脑-云栈科技.zip`](./示例大脑-云栈科技.zip) (click the ⬇ download button), unzip, open as a vault, follow the demo manual inside. *(Demo content is Chinese-only.)*
 
 ![Demo brain in action](./docs/images/gif/demo-act2.gif)
 
@@ -85,7 +71,7 @@ An empty brain is hard to appreciate. We ship a **ready-to-play sandbox** — a 
 
 The six regions aren't just tidy — **they're what makes Friday absurdly cheap to run**. Aggregate queries scan structured frontmatter (dozens of tokens per file) instead of whole documents; every domain has an overview map (MOC) so Friday starts from one page, not eleven; questions open only the region they belong to; and routines live in `skills/` once, invoked by name instead of re-explained every time.
 
-Measured on DeepSeek V4 over a 169-note vault: brain build **¥0.10**, a complex multi-file analysis **≈¥0.02 per question**, 11 of them back-to-back **¥0.26 total**. A real 10-person team ran this architecture for a full week — the heaviest user spent under **¥20**.
+Model costs depend on the provider, model, context size, and usage. Evaluate costs using your own usage records and validate results in your environment.
 
 ## 📦 Tools you'll install (all free / very cheap)
 
@@ -100,19 +86,19 @@ Measured on DeepSeek V4 over a 169-note vault: brain build **¥0.10**, a complex
 
 ## Star History
 
-![FridayOS-Lite Star History Chart](./docs/images/star-history.svg)
+![FridayOS 1.0 Star History Chart](./docs/images/star-history.svg)
 
 <sub>Verified observations; collected daily from 2026-08-11. Missing dates are not reconstructed from the current stargazer list.</sub>
 
 ## 💬 Stuck?
 
-<!-- TODO (before release): upload the WeCom group QR to docs/images/group-qr.png and uncomment -->
-<!-- ![Group QR](./docs/images/group-qr.png) -->
 
-Community group QR coming soon. Bug reports and questions are welcome on the [Issues](../../issues) page.
+
+
+Bug reports and questions are welcome on the [Issues](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues) page.
 
 ---
 
 <div align="center">
-<sub>FridayOS‑Lite · One document, one sentence, one brain.</sub>
-<
+<sub>FridayOS 1.0 · One document, one sentence, one brain.</sub>
+</div>

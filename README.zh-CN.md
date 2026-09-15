@@ -1,38 +1,28 @@
-<div align="center">
+# FridayOS 1.0
 
-<img src="./docs/images/hero.gif" alt="FridayOS-Lite — 会自己搭建的 AI 第二大脑" width="100%" />
+### 从一个 AI 第二大脑开始，探索更亲和人的 Agent OS。
 
-# 🤖 FridayOS‑Lite
+**FridayOS 1.0 是[鲁滨逊 · Robinson AI Lab](https://github.com/Neusoft-Intelligent-Laboratory)的开源实践项目，原名 FridayOS-Lite。** 项目在原有知识管理实践的基础上持续演进。
 
-### 一份文档，一句话，一个 AI 第二大脑
+鲁滨逊由对 AI 感兴趣、愿意持续投入研究的伙伴组成，以公益分享与共同学习为宗旨，研究 AI 管理的理论概念及应用实践。FridayOS 是我们的主打产品：让 AI 更自然地进入人的知识、经验与行动过程。
 
-**不用懂技术。不用下载模板。** 装好 Obsidian + Claudian 五件套，
-下载一份《大脑蓝图》丢进文件夹，对 AI 说一句话——
-它自己把你的第二大脑 **Friday** 搭建出来。
+简体中文 · [English](./README.md) · [实验室介绍](./LAB.md) · [反馈与讨论](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)
 
-简体中文 · [English](./README.md)
+## 这一版可以做什么
 
-![无需翻墙](https://img.shields.io/badge/无需翻墙-✓-10B981?style=flat-square) ![无需订阅](https://img.shields.io/badge/便宜到几毛钱-DeepSeek_V4-4F46E5?style=flat-square) ![约30分钟](https://img.shields.io/badge/约30分钟装好-22D3EE?style=flat-square) ![License: MIT](https://img.shields.io/badge/License-MIT-7C3AED?style=flat-square)
+以 **Obsidian + Claudian** 为主要使用入口，把笔记保存在本地 Markdown 文件夹中，借助 AI 协助记录、整理、检索和连接知识。你可以从一份大脑蓝图开始，按指南搭建自己的 Friday，再用虚构示例理解它的工作方式。
 
-<sub>由 Neusoft Intelligence Lab 打造 · 想要 AI 自主运维的完整版（自动捕获 + 机械保障）？见 <a href="https://github.com/Neusoft-Intelligent-Laboratory/FridayOS">FridayOS</a></sub>
+- **记录与检索**：用自然语言描述想保存或查找的内容。
+- **知识组织**：学习六个脑区的分工，让资料、知识、任务和经验有清楚的位置。
+- **实践与学习**：通过安装指南、示例和演示步骤逐步上手。
 
-</div>
+当前版本聚焦个人知识管理。飞书机器人、自动消息捕获和完整的运行保障不属于本版已提供能力；更完整的人机任务协作与 Agent OS 是持续研究方向。
 
----
+这里的 **Agent OS** 是连接 AI 智能体、知识、工具和任务的协作环境。我们希望它便于理解、尊重人的选择，并让重要判断和执行权限保持清晰。
 
-## Lite 是什么、不是什么
+## 适合谁
 
-**Lite 只专注一件事：教你用 Obsidian + Claudian 管好自己的知识库**——也就是 Friday 的"第二大脑"本体。学会六个脑区的分区理念，让 AI 帮你随手记、定期理、随时找。每日计划、周计划这类记录，你在 Obsidian 里手动写或在对话里让 Friday 代笔。
-
-它**不做**自动化接入：没有飞书机器人、没有随时随地的消息捕获，也没有给大脑定期体检的机械保障（lint 脚本、记忆衰减、入站安全）。那些是正式版 [FridayOS](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS) 的事——**AI 不只帮你记，还按一份契约自主运维整个大脑**。等你用 Lite 把分区理念用顺了，文件夹原样带过去升级即可，零迁移。
-
-**Lite 给这样的你：**
-- 没听过 Claude、Obsidian，也不知道去哪下、怎么装
-- 一看"命令行""环境变量"就头大
-- 不想翻墙、不想付外币订阅
-- 只想要一个**能帮我记事、整理、随时问**的 AI 助理
-
-> 如果你能照着说明点鼠标、复制粘贴一行字，你就能装好。✅
+对 AI 好奇，希望有一个能帮忙记事、整理和查找知识的伙伴；愿意按指南尝试工具，也愿意分享过程中的问题与发现。无需先有软件开发经验。
 
 ## 三句话讲清楚
 
@@ -44,11 +34,11 @@
 
 你可能听过 vibe coding——把想法说出来，AI 负责写代码。**Vibe Knowledge Management（VKM）** 就是同一件事在知识上的版本：**用自然语言驱动 AI 管理知识库。** 你不再亲手建文件夹、贴标签、修链接——你只管说话：随口记一句、问一个问题、说一声"老规矩"，归档、连接、检索全是 Friday 的活。
 
-VKM 就是 Friday 的核心，Lite 是它最小的完整形态。也坦白说：这是一种很新的工作方式——它的可复制性、上手的认知成本，还需要更多用户来验证。**这正是这个仓库存在的意义。**
+VKM 就是 Friday 的核心，FridayOS 1.0 是它最小的完整形态。也坦白说：这是一种很新的工作方式——它的可复制性、上手的认知成本，还需要更多用户来验证。**这正是这个仓库存在的意义。**
 
 ## 🗺️ 五个工具怎么搭起来
 
-![FridayOS-Lite —— 五个工具，一条信号链](./docs/images/tools-flow.gif)
+![FridayOS 1.0 —— 五个工具，一条信号链](./docs/images/tools-flow.gif)
 
 > 蓝色 = 你看见、动手操作的；绿色 = 幕后帮你思考的。每个工具是什么、为什么需要，详见 [`工具说明.md`](./工具说明.md)。
 
@@ -81,17 +71,17 @@ VKM 就是 Friday 的核心，Lite 是它最小的完整形态。也坦白说：
 
 **示例大脑「云栈科技」** —— 一家虚构的 100 人杭州 IT 公司。100 名员工档案（姓名/年龄/履历/项目/绩效/薪酬）、11 个项目、6 个客户全部双链互连，六个脑区部署完整，还埋了"薪酬倒挂""核心员工被挖"等剧情。
 
-**怎么玩**：下载 [`示例大脑-云栈科技.zip`](./示例大脑-云栈科技.zip)（点开后点 ⬇ 下载按钮）→ 解压 → Obsidian 打开为 vault →**在这个新 vault 里重装一遍 Claudian（插件按 vault 各管各的，半分钟）**→ 照着里面的《先玩这里-演示手册》丢 11 个提示词给 Friday（救火/经营/助理三幕，每条附"答案方向"折叠块可对照自查）。每条都演示一种**免费大模型对话框做不到的事**：多知识串联、跨档案聚合、永不过期的记忆、一句"老规矩"的默契、好答案沉淀成技能。
+**怎么玩**：下载 [`示例大脑-云栈科技.zip`](./示例大脑-云栈科技.zip)（点开后点 ⬇ 下载按钮）→ 解压 → Obsidian 打开为 vault →**在这个新 vault 里重装一遍 Claudian（插件按 vault 各管各的，半分钟）**→ 照着里面的《先玩这里-演示手册》丢 11 个提示词给 Friday（救火/经营/助理三幕，每条附"答案方向"折叠块可对照自查）。演示内容包括：多知识串联、跨档案聚合、保存在本地的记录、一句"老规矩"的默契、好答案沉淀成技能。
 
 ![示例大脑实录：Friday 沿双链翻档案、跑提示词](./docs/images/gif/demo-act2.gif)
 
-> 建议做一次对照实验：把同样的问题贴到免费对话框里，高下立判。😏
+> 可以用相同问题做对照实验，记录检索依据、回答质量、耗时与费用，而后判断是否适合自己的场景。
 
 ## 💸 省 token 是架构出来的
 
-六脑区不只是整洁——**它是 Friday 便宜得离谱的根本原因**。聚合查询扫结构化 frontmatter（每档几十 token）而不读全文；每个域有总览地图（MOC），Friday 从一页出发而不是翻十一页；问题只打开它所属的脑区；套路沉淀在 `skills/` 里按名调用，不用每次重新解释。
+六脑区不只是整洁——**它帮助缩小每次检索需要读取的范围**。聚合查询扫结构化 frontmatter（每档几十 token）而不读全文；每个域有总览地图（MOC），Friday 从一页出发而不是翻十一页；问题只打开它所属的脑区；套路沉淀在 `skills/` 里按名调用，不用每次重新解释。
 
-DeepSeek V4 实测（169 文件知识库）：搭建大脑 **¥0.10**，一条跨百档案的复杂分析 **约 ¥0.02**，连跑 11 条共 **¥0.26**。一个真实 10 人团队用这套架构跑了整周——用得最猛的人花费不到 **¥20**。
+实际模型费用取决于服务商、模型、输入长度与使用频率。请以自己的用量记录评估成本；不同环境下的体验需要分别验证。
 
 ## 📦 要装的工具（全部免费/极便宜）
 
@@ -106,13 +96,13 @@ DeepSeek V4 实测（169 文件知识库）：搭建大脑 **¥0.10**，一条�
 
 ## 💬 卡住了？来群里问
 
-<!-- TODO（发布前）：上传企业微信群二维码到 docs/images/group-qr.png，并取消下行注释 -->
-<!-- ![加群二维码](./docs/images/group-qr.png) -->
 
-交流群二维码即将放出。也欢迎在本仓库提 [Issue](../../issues)。
+
+
+交流群二维码即将放出。也欢迎在本仓库提 [Issue](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS1.0/issues)。
 
 ---
 
 <div align="center">
-<sub>FridayOS‑Lite · 一份文档，一句话，一个大脑。<br/>One document, one sentence, one brain.</sub>
+<sub>FridayOS 1.0 · 一份文档，一句话，一个大脑。<br/>One document, one sentence, one brain.</sub>
 </div>

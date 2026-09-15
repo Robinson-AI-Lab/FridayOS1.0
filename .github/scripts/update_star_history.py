@@ -9,7 +9,7 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-REPO = "Neusoft-Intelligent-Laboratory/FridayOS-Lite"
+REPO = os.environ.get("GITHUB_REPOSITORY", "Neusoft-Intelligent-Laboratory/FridayOS1.0")
 SNAPSHOTS = Path("docs/data/star-history.csv")
 OUTPUT = Path("docs/images/star-history.svg")
 WIDTH, HEIGHT = 900, 420
@@ -20,7 +20,7 @@ def fetch_current_count():
     headers = {
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2026-03-10",
-        "User-Agent": "FridayOS-Lite-star-history",
+        "User-Agent": "FridayOS1.0-star-history",
     }
     token = os.environ.get("GITHUB_TOKEN")
     if token:
@@ -124,7 +124,7 @@ def render(snapshots):
     start_label = start.isoformat()
     end_label = end.isoformat()
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">
-<title id="title">FridayOS-Lite Star History</title>
+<title id="title">FridayOS1.0 Star History</title>
 <desc id="desc">{len(snapshots)} observed star-count snapshots from {start_label} to {end_label}; current count {current}</desc>
 <style>
   .bg {{ fill: #ffffff; }} .grid {{ stroke: #e5e7eb; stroke-width: 1; }}
