@@ -1,4 +1,4 @@
-# FridayOS 1.0
+# FridayOS 1.0 — 本地优先的 AI 第二大脑与个人知识管理
 
 [English](./README.md) · **简体中文** · [鲁滨逊实验室](./LAB.zh-CN.md)
 
@@ -9,7 +9,7 @@
 
 **让知识像大脑一样分工，让 AI 沿着你的知识持续工作。**
 
-FridayOS 1.0 是一个以 **六脑方法**为核心的开源知识工作实践：参考人脑功能，把本地文件夹划分为相互协作的区域，连接资料、知识、任务和可复用方法。一份蓝图，帮助你开始搭建自己的 AI 第二大脑。
+FridayOS 1.0 是一个以 **六脑方法**为核心的开源个人知识管理（PKM）项目，提供本地 Markdown 蓝图、Obsidian 示例知识库和中英文教程，帮助你搭建自己的 AI 第二大脑。它参考人脑功能，把本地文件夹划分为相互协作的区域，连接资料、知识、任务和可复用方法。
 
 **[六脑理论 →](./docs/SIX-BRAIN.zh-CN.md)**　 **[下载蓝图包 →](https://github.com/Robinson-AI-Lab/FridayOS1.0/raw/refs/heads/main/dist/FridayOS-Blueprint.zip)**　 **[开始部署 →](./docs/DEPLOYMENT.zh-CN.md)**
 
@@ -102,4 +102,5 @@ FridayOS 1.0 聚焦个人知识工作。工作场景的 Agent OS 与更亲人的
 ---
 
 **FridayOS 1.0 · 六脑分工，一份蓝图，从自己的工作开始。**
+
 

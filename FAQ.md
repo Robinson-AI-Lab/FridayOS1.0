@@ -1,109 +1,54 @@
-# 🆘 FAQ
+# FridayOS 1.0 FAQ — AI second brain, Obsidian and local knowledge management
 
-> Don't panic — most answers are in here. 中文：[`常见问题.md`](./常见问题.md)
+**English** · [简体中文](./常见问题.md) · [Project home](./README.md) · [Deployment guide](./docs/DEPLOYMENT.md)
 
----
+## What is FridayOS 1.0?
 
-## Positioning
+An open-source personal knowledge management project built around the **Six-Brain Method**. It provides a local Markdown blueprint, a fictional Obsidian example vault, and guides for organizing sources, knowledge, tasks and reusable methods. The six regions are a design analogy, not a neuroscience claim.
 
-**What is "Vibe Knowledge Management"?**
-The core idea behind Friday: **drive your knowledge base with natural language and let the AI manage it** — like vibe coding, but for knowledge. You talk; Friday files, links, and retrieves. It's a new way of working, and how well it replicates for every user is still being verified — by users like you.
+The broader Agent OS is a development direction. This repository does not ship a complete desktop operating system or an autonomous business team.
 
-**Lite vs. full FridayOS — which one?**
-Lite does one thing: a knowledge base managed with Obsidian + Claudian (the six-region idea). Daily/weekly plans you write by hand or dictate in chat.
-The full version adds automated entry points: Feishu bot capture from anywhere, a `domains/` project workbench, personality adaptation.
-**Start with Lite; when you upgrade, your folder moves over as-is. Zero migration.**
+## What can I download today?
 
-**Why is there no template to download?**
-You don't need one. Lite's entire "template" is one file — [`FRIDAY-BLUEPRINT.md`](./FRIDAY-BLUEPRINT.md). Drop it into an empty folder, tell Friday "build from this", and the six regions appear. The document *is* the template.
+- [Complete blueprint package](https://github.com/Robinson-AI-Lab/FridayOS1.0/raw/refs/heads/main/dist/FridayOS-Blueprint.zip): the core, project sub-brains, deliverables, attachments, and separate work/archive spaces. Core-only deployment is also available.
+- [Cloudstack example vault](./示例大脑-云栈科技.zip): Chinese fictional company material with 11 practice prompts.
+- [Six-Brain Method](./docs/SIX-BRAIN.md), [deployment guide](./docs/DEPLOYMENT.md) and [tool roles](./TOOLS.md).
 
-**Do my notes get uploaded anywhere? What about privacy?**
-The note files themselves live **only on your computer** — no cloud account. To be honest though: whatever your conversation touches (your question + the note snippets Friday reads) is sent to the model provider (e.g. DeepSeek) for processing — that's how every AI assistant works. Keep truly sensitive things (passwords, ID numbers) out of Friday's reach.
+The deployment package creates a starting structure. It does not install or configure an AI model for you.
 
----
+## How should a beginner start?
 
-## Install
+Download and unzip the blueprint package, install Python 3.9+, then follow the [deployment guide](./docs/DEPLOYMENT.md) to **preview, create and check** a fresh target folder. Deployment works offline after download.
 
-**I can't code at all — can I really do this?** Yes. Only two steps need you to paste one line into a terminal; everything else is mouse clicks. Just follow [`INSTALL.md`](./INSTALL.md).
+You can read the Markdown files in a text editor or use Obsidian as the interface. Add an AI tool only when you are ready to configure its access and verify it with a small task.
 
-**Do I need a VPN?** No. Claude Code installs from a China mirror; DeepSeek connects directly.
+## Can I use my existing Obsidian vault?
 
-**How much does it cost?** Only DeepSeek needs a top-up — ¥10 (≈$1.5) lasts a long while. Everything else is free. Measured: all 11 demo prompts (multi-file analysis over 169 notes) cost **¥0.26 total — ≈¥0.02 per question**. The frugality is architectural: frontmatter scans instead of full reads, overview maps as entry points, one region per question, skills reused by name.
+Begin in a separate folder and compare the structure with your existing notes. Back up existing content before any adaptation. The deployment checks cover conflict protection, but the package does not migrate an existing vault or maintain its backups. There is no promise of automatic or zero-effort migration.
 
-**Phone / tablet?** No. Claudian is desktop-only (Windows / Mac).
+## Do I need Obsidian, Claudian, Claude Code or Feishu?
 
----
+The blueprint itself needs Python 3.9+, not these services. Obsidian is one interface for the Markdown files. The [historical setup example](./INSTALL.md) describes an AI tool combination; use the [tool guide](./TOOLS.md) and current official documentation when selecting providers and versions.
 
-## Blueprint / build
+Feishu is optional. Manually supplied files are enough to begin. A referenced integration is not a guarantee that every current plugin, model and API combination has been tested.
 
-**I said "build from the Blueprint" but Friday didn't act / built it wrong?**
-1. Confirm the Blueprint file sits in the vault **root** (not a subfolder).
-2. Tell it: "**Re-execute Blueprint Section 6 exactly.**"
-3. Still stuck? Use the Blueprint's manual fallback — six folders by hand plus one copy-paste, two minutes.
+## Is it free?
 
-**The build is missing pieces (no templates / skills / interview)?**
-Usually means it ran in a **non-empty folder**. Either tell it "re-execute Section 6 steps 1-11 one by one, skip nothing", or — most reliable — start over in a fresh empty folder (30 seconds).
+The repository is shared under the [MIT license](./LICENSE). Third-party products, subscriptions and model API calls have their own terms and charges. Check their current official pricing before enabling a paid service. No fixed token price, free-service promise or spending estimate is part of this project.
 
-**Downloaded Blueprint invisible in Obsidian / saved as .txt?**
-Browsers often save raw pages as `.txt`, and Obsidian only shows `.md` (Windows hides extensions, so you can't even tell). **Skip renaming — use copy-paste**: open the raw page → Ctrl+A, Ctrl+C → in Obsidian Ctrl+N, name it, Ctrl+V.
+## Does local storage mean my data never leaves my computer?
 
-**Can I edit the Blueprint / contract?**
-Of course — it's your brain. After setup the rules live in `system/CLAUDE.md`; edit them in plain language (e.g. "be more brief"). Friday follows the new rules from its next task.
+Markdown can stay on your device. If you configure an external AI provider or a sync service, data you send through that service may leave the device. Review the provider settings and the material included in each task. Keep credentials and private records out of public examples and issue reports.
 
----
+## What has been validated?
 
-## Terminal
+The [blueprint validation record](./docs/BLUEPRINT-VALIDATION.md) covers Windows deployment, repeated execution, conflict protection, core expansion and execution from the standalone ZIP.
 
-**`node -v` or `claude --version` does nothing / "not recognized"?**
-1. Close the terminal **completely and reopen** (new installs need a fresh window).
-2. Confirm the previous step actually finished (no Node.js → no claude).
+macOS/Linux devices, AI integrations and newcomer tasks require separate validation. Fictional demonstrations are examples, not evidence of customer outcomes or measured productivity gains. Automatic maintenance and backup are not provided by the package.
 
-**`npm install ...` is slow / spews red errors?**
-1. Usually network — **run the exact same line again**.
-2. If it still fails, swap the mirror:
-   `npm install -g @anthropic-ai/claude-code --registry=https://registry.npmjs.org`
-3. Confirm Node.js is LTS (v18+).
+## How can I contribute or ask for help?
 
-**`claude` asks me to log in / subscribe?**
-cc-switch hasn't taken over yet. Go back to [`INSTALL.md`](./INSTALL.md) **Step 4**: DeepSeek provider created, key pasted correctly, "Sync" clicked, "Apply to Claude Code Plugin" enabled.
+[Open an issue](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) with your operating system, the guide you followed, steps, expected result and actual result. Remove private content and credentials. Useful contributions include reproducible problems, clearer beginner instructions, and documented adaptation experience.
 
----
+[Back to FridayOS 1.0](./README.md) · [Start deployment](./docs/DEPLOYMENT.md)
 
-## DeepSeek / API key
-
-**Closed the key popup without copying?** Fine — delete that key on the platform and create a new one. Copy it immediately this time.
-
-**Friday won't reply / insufficient balance / 401?** Check in order:
-1. **Topped up?** Zero balance = no replies.
-2. **Key pasted right** in cc-switch? No extra spaces / missing characters?
-3. Base URL exactly `https://api.deepseek.com/anthropic` (**don't drop `/anthropic`**).
-
-**Which model names?** Main: `deepseek-v4-pro[1m]`; budget: `deepseek-v4-flash`. `[1m]` = long context, keep it.
-
----
-
-## Claudian / Obsidian
-
-**If I installed Claudian, can I skip Claude Code?**
-No — **Claude Code is required**. Claudian is just a shell/steering wheel; it drives Claude Code as its engine (official hard requirement; without it you get `spawn claude ENOENT`). Installing the engine needs no subscription, no login, no VPN — cc-switch + DeepSeek handle the rest.
-
-**Can't find Claudian in community plugins?**
-1. "Turn on community plugins" clicked? 2. Obsidian ≥ 1.8.9? 3. Spelling: `Claudian`.
-
-**Claudian installed but unresponsive / can't reach the AI?**
-Set **Provider to "Claude"** (i.e., Claude Code) in Claudian's settings. Prerequisites: `claude --version` works, cc-switch synced to DeepSeek.
-
-**New computer — do I lose my brain?**
-Never. Your brain is the folder — **copy it**. Reinstall the apps on the new machine.
-
----
-
-## Still stuck?
-
-- Take a **screenshot** and note the **exact error text** of the step you're stuck on.
-- Re-check every earlier step in [`INSTALL.md`](./INSTALL.md) ✅.
-- **Ask in the community group** (WeCom QR coming soon — see README) or open an Issue in this repo.
-- Official docs: DeepSeek × Claude Code 👉 https://api-docs.deepseek.com · cc-switch 👉 https://github.com/farion1231/cc-switch
-
-> Order matters: foundation (Node) → engine (Claude Code) → key (DeepSeek) → wiring (cc-switch) → vault (Obsidian + Blueprint) → AI moves in (Claudian) → one sentence builds the brain.
-> Whatever step fails, first confirm everything before it succeeded.

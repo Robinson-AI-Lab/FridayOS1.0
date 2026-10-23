@@ -1,4 +1,4 @@
-# FridayOS 1.0
+# FridayOS 1.0 — A local-first AI second brain for knowledge work
 
 **English** · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md)
 
@@ -9,7 +9,7 @@
 
 **Give knowledge a structure your AI can work with.**
 
-FridayOS 1.0 is an open-source knowledge-work project built around the **Six-Brain Method**. Inspired by the division of functions in the human brain, it organizes local folders into cooperating regions for sources, knowledge, tasks, and reusable methods. One blueprint helps you start building your own AI second brain.
+FridayOS 1.0 is an open-source **personal knowledge management (PKM)** project built around the **Six-Brain Method**. It provides a local Markdown blueprint, an Obsidian example vault, and bilingual guides for building an AI second brain. Inspired by the division of functions in the human brain, it organizes sources, knowledge, tasks, and reusable methods into cooperating regions.
 
 **[The method →](./docs/SIX-BRAIN.md)**　 **[Download →](https://github.com/Robinson-AI-Lab/FridayOS1.0/raw/refs/heads/main/dist/FridayOS-Blueprint.zip)**　 **[Get started →](./docs/DEPLOYMENT.md)**
 
@@ -102,4 +102,5 @@ Based on collected observations; missing dates are not reconstructed. Interest i
 ---
 
 **FridayOS 1.0 · Six regions. One blueprint. Your own work.**
+
 
