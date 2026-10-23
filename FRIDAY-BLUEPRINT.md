@@ -14,26 +14,44 @@
 
 ---
 
-## 1. The idea: one folder is one brain
+## 1. The idea: organize folders by brain-inspired function
 
-Human brains are great at thinking, terrible at storage. A second brain is externally attached memory that never forgets; Friday is the butler who lives inside and keeps it tidy.
+**Owen Teng proposed the Six-Brain Method, developed through Friday practice with Robinson AI Lab.** It takes inspiration from the division of functions in the brain, assigns capture, execution, knowledge, skills, evidence, and regulation to folders, and connects them through references, tasks, and feedback.
+
+A folder tells an AI what content is relevant, how it may be updated, and how it supports the task. Publicly available tools carry the method; Feishu and the author's private environment are not prerequisites.
 
 Three principles:
 
-1. **One folder is one brain.** Plain `.md` text, no database, no lock-in. Copy the folder, move your whole brain.
-2. **Notes flow; they don't pile up.** Knowledge has a lifecycle: captures (`inbox`) → in motion (`exec`) → worth keeping (`wiki`) → repeated work becomes routine (`skills`). What doesn't flow gets deleted. **The partitions also save money**: Friday reads per-region and scans frontmatter instead of whole files — a measured multi-file analysis over 100+ records costs ≈¥0.02.
-3. **You think, Friday remembers.** Say something in passing — it files it. Ask a question — it searches your brain first. This way of working has a name: **Vibe Knowledge Management** — driving a knowledge base with natural language.
+1. **Separate responsibilities.** New input, active tasks, reusable understanding, validated methods, originals, and rules have distinct homes. Six regions are functional analogies, not replicas of six biological organs.
+2. **Route by purpose.** Information can become a task, evidence, or knowledge. Execution uses knowledge and skills; feedback revises understanding. Content need not visit every region, and inactivity alone does not authorize deletion.
+3. **Cooperate with people.** People set goals and decide important trade-offs. AI retrieves, connects, and executes within its authority. Vibe Knowledge Management (VKM) names the natural-language interaction with this structure. External records support later retrieval; they do not train model weights or establish permanent model memory.
+
+Local Markdown holds knowledge. Moving files still requires checks for attachments, links, plugins, and model settings. Smaller task-specific reading scope is a design goal; measure actual costs and results.
+
+Read the [full theory](./docs/SIX-BRAIN.md) for the rationale; this blueprint retains the essentials needed for standalone setup.
 
 ## 2. The six regions
 
-| Region | Folder | In a line | What goes in |
+| Region | Functional inspiration | Folder | Responsibility |
 |---|---|---|---|
-| 📥 Inbox | `inbox/` | Capture fast, sort later | Sudden ideas, key lines, links to read |
-| 🎯 Workbench | `exec/` | The 3–7 things in motion | Weekly plan, current tasks, decision log |
-| 📚 Knowledge | `wiki/` | Worth keeping long-term | Polished notes, concepts, people & things |
-| ⚙️ Skills | `skills/` | Repeated work as routines | Procedures you often invoke |
-| 📦 Archive | `raw/` | Source material, read-only | Originals, PDFs, long documents |
-| 🫀 Core | `system/` | Manual + templates | `CLAUDE.md` contract, filing templates |
+| Capture | New experience entering memory; hippocampal-function analogy | `inbox/` | Receive unprocessed input before deciding its use |
+| Execution | Prefrontal goal maintenance and executive control | `exec/` | Goals, state, next actions, and decisions |
+| Knowledge | Cortical knowledge and associations | `wiki/` | Sourced, revisable understanding |
+| Skills | Procedural learning and habit formation | `skills/` | Validated methods and checks |
+| Evidence | External original records, without a single anatomical equivalent | `raw/` | Preserve originals for tracing and verification |
+| Regulation | Basic operational regulation as an analogy | `system/` | Rules, authority boundaries, and templates |
+
+These functions involve interacting networks. The mapping explains design responsibilities, not anatomical equivalence.
+
+### Core flow and optional extensions
+
+Capture → route into tasks, evidence, or knowledge → retrieve knowledge and skills for work → human review → feedback into knowledge and methods. Evidence preserves provenance; rules govern the process.
+
+- `domains/<project>/` can act as a project or domain “sub-brain”: keep scoped context, reference shared knowledge, and return reusable findings. Promotion does not change access rights; project completion does not authorize deleting originals.
+- `output/` can hold current deliverables. Use feedback supports later learning; its effector analogy does not make it another biological brain region.
+- Attachments, production workspaces, and archives are optional and use user-chosen paths.
+- **This blueprint provisions only the six core regions by default. Extensions are explained here, not automatically installed or connected.**
+
 
 Usage notes:
 
@@ -83,8 +101,8 @@ Speak the owner's language: concise, warm, **conclusion first, no rambling, no f
 ## Material standards (the root of knowledge-base quality)
 
 1. **File from templates**: new wiki entries, meeting notes, skills all start from system/templates/; no frontmatter field skipped.
-2. **Frontmatter is the database**: search and stats scan frontmatter first (type/tags/status/dates); body text is for humans.
-3. **raw/ is the source of truth**: wiki is a derived view; on conflict, raw/ wins — and tell the owner.
+2. **Locate, then verify**: use indexes and frontmatter to narrow the scope; read relevant bodies and sources before making factual claims.
+3. **raw/ preserves sources**: wiki holds interpretations and reusable understanding. Check provenance, dates, and context when sources conflict; neither an original nor an AI summary automatically overrides verified knowledge.
 4. **Wikilink everything**: people, events, projects link via [[name]]; at 10+ wiki notes, proactively build an Overview (MOC) page and register new entries on it.
 5. **Append, never erase**: timelines and decision logs only grow; mark resolved items ✅, keep history.
 6. **Filenames** short and self-explanatory; update frontmatter `updated` on any real change.
@@ -93,7 +111,7 @@ Speak the owner's language: concise, warm, **conclusion first, no rambling, no f
 
 1. **Catch first**: route everything; unsure → inbox/. **Never lose a single sentence.**
 2. **Route**: on "clean up my inbox" — active → exec/; keepers → wiki/ via template; repeated procedures → propose a skill; useless → list for confirmation, then delete.
-3. **Search before answering**: always check wiki/ and exec/ first, answer with that context, **cite which notes**; if the brain has nothing, say so — **never invent**.
+3. **Retrieve for the task**: when a question concerns this workspace, locate relevant indexes and pages, check sources, and cite them. Do not scan the vault for unrelated questions or invent missing content.
 4. **Connect**: follow [[wikilinks]] — evaluating anything = its records + related people + past decisions (decision log).
 5. **Be proactive** (what separates you from a chatbot):
    - two notes contradict → flag it;
@@ -121,7 +139,7 @@ Speak the owner's language: concise, warm, **conclusion first, no rambling, no f
 
 ## 4. Starter templates (system/templates/)
 
-Friday saves these three as files under `system/templates/`. All future filing starts from them — **material quality is seven-tenths of Friday's performance**.
+Friday saves these three as files under `system/templates/`. All future filing starts from them — material quality, rule loading, and actual operations all affect results.
 
 **`system/templates/General Entry Template.md`** — people, projects, concepts in wiki:
 
@@ -307,13 +325,14 @@ tags: [skill]
 ### For Friday: execute exactly 🤖
 
 1. Confirm the working directory is the vault root (where this blueprint sits).
-2. Create folders: `inbox/`, `exec/`, `wiki/`, `skills/`, `raw/`, `system/`, `system/templates/`.
+2. Create the six core folders and template subfolder: `inbox/`, `exec/`, `wiki/`, `skills/`, `raw/`, `system/`, `system/templates/`.
+   Create README.md in each core folder using Section 2: explain responsibilities, contents, flow, source protection, and references, without personal data or external-service configuration.
 3. Write the **Section 3 code block** verbatim into `system/CLAUDE.md`.
 4. Write the **three Section 4 templates** into `system/templates/`.
 5. Write the **three Section 5 skills** into `skills/` (set `created` to today).
 6. Create `exec/Weekly Plan.md` (three goals, empty + Friday review, empty) and `exec/Decision Log.md` (empty table: date/decision/reason/premise, plus one line: "Decisions live here so nothing gets re-litigated").
 7. Create `wiki/Welcome.md` with demonstration frontmatter and a few lines on wikilinks.
-8. Move this blueprint into `system/` for archival.
+8. Copy this blueprint into `system/` while preserving the original entry point. Repository links refer to their original repository locations; do not assume relative links survive relocation.
 9. **⭐ Interview the owner** (all three at once, briefly): ① What should I call you? ② What will this brain mainly manage? ③ What answer style do you prefer? **Show the owner this three-tier comparison first** (example: "what's on tomorrow"):
     - **Brief & direct**: "3 things: ①14:00 meeting ②weekly report ③client call." — answers only; **beginners may find it cold and terse**
     - **Standard: conclusion first, then detail (🌟 recommended for beginners)**
@@ -326,9 +345,11 @@ tags: [skill]
     - 3 starter skills under `skills/`
     - `exec/Weekly Plan.md` and `exec/Decision Log.md` created
     - `wiki/Welcome.md` created
+    - README.md present in each core folder, with responsibilities matching Section 2
+    - The selected AI environment can actually read the contract; one capture and retrieval operation checked
     - this blueprint archived into `system/`
 
-Do nothing beyond these steps; never delete or modify the owner's other files.
+Do nothing beyond these steps. On repeated setup, compare existing files and fill only missing items. Preserve user content and present conflicting differences before changing it. Do not overwrite or delete existing material or enable schedules, external sending, or model account configuration.
 
 ### Manual fallback 🛠️
 
@@ -345,10 +366,13 @@ Do nothing beyond these steps; never delete or modify the owner's other files.
 - **Anytime**: it did something well? Say "**turn this into a skill**".
 - **Tuning**: don't like its style? Just say so — it updates "Your owner" in the contract.
 
-## 8. Want more?
+## 8. Grow only where needed
 
-**Lite focuses on one thing: your knowledge base in Obsidian + Claudian.** For capture-from-anywhere (Feishu chat), a `domains/` project workbench, and mechanical health checks for the brain — upgrade to the full 👉 [**FridayOS**](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS). Your folder moves over as-is.
+Manual file input is enough to begin. For project scope, deliverables, or additional entry points, use the [Six-Brain theory](./docs/SIX-BRAIN.md) to choose sub-brains, an output region, and adapters. Feishu is optional. A design description is not an installed capability.
+
+This update improves theory and core-folder explanations. A complete extension deployment package still needs separate implementation and verification.
 
 ---
 
-*FridayOS‑Lite · One document, one sentence, one brain.*
+*FridayOS 1.0 · Six regions. One blueprint.*
+

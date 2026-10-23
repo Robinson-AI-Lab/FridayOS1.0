@@ -1,50 +1,63 @@
-# 🧩 How Friday Is Built (Tool Guide)
+# Tool Roles Behind the Six-Brain Method
 
-> **Read this before installing.** Once you see *why* each tool exists, the install steps make sense.
->
-> 🌐 中文版：[`工具说明.md`](./工具说明.md)
+[简体中文](./工具说明.md) · [Home](./README.md) · [Six-Brain theory](./docs/SIX-BRAIN.md)
 
----
+**Decide how knowledge should work, then choose tools.** Friday's core is a brain-inspired division of responsibilities and the rules connecting those regions. Publicly available tools supply storage, interfaces, AI execution, and model services.
 
-## The whole picture
+## From method to implementation
 
-You're building yourself an AI second brain named **Friday** — like a real assistant, assembled from **four layers**, outside‑in:
+| Layer | Responsibility | Reference implementation in this guide |
+|---|---|---|
+| Six-Brain Method | Define destinations, relationships, updates, and reuse | Friday blueprint, behavior contract, and templates |
+| Storage | Preserve knowledge and source material | Local Markdown folders and attachments |
+| Reading and editing | Let people inspect and revise content | Obsidian |
+| Conversation | Accept tasks inside the notes environment | Claudian |
+| Agent execution | Read, search, edit, and invoke tools | Claude Code |
+| Model reasoning | Interpret input, reason, and generate content | A selected compatible model service |
+| Configuration help | Manage connection settings | cc-switch when useful, or the host's supported configuration |
+| Runtime dependencies | Run the selected software | As required by the installation method, such as Node.js |
 
+The model provides reasoning. The Agent environment connects reasoning to tool operations. The notes interface lets people inspect and correct results. The Six-Brain Method defines how those operations affect the knowledge workspace.
+
+## How a request moves through the layers
+
+```text
+User states a task
+    ↓
+Conversation interface → Agent reads relevant rules
+                               ↓
+                       Retrieves knowledge, evidence, and skills
+                               ↓
+                       Model reasoning ↔ Agent tool operations
+                               ↓
+                       Writes by responsibility and returns results
+                               ↓
+                       User reviews, corrects, and continues
 ```
-  You
-   │  say something
-   ▼
-┌───────────────────────────────────────────────┐
-│ 1️⃣ Obsidian       — the brain's "body" (a notes app you can see)   │
-│     └ 2️⃣ Claudian plugin — moves the AI *into* Obsidian's sidebar  │
-│           └ 3️⃣ Claude Code — Friday's "engine" (the AI that works) │
-│                 └ 4️⃣ cc-switch — the "chip switcher"               │
-│                       └ 5️⃣ DeepSeek V4 — a cheap, no‑VPN "brain chip" │
-└───────────────────────────────────────────────┘
-```
 
-Each layer solves a problem the previous one creates. That's why you need all five.
+For a research brief, the interface receives the request, the Agent finds files, the model supports analysis, and tools save the result. Six-Brain rules preserve the relationship between sources and knowledge. Installed software alone does not establish that rules have loaded correctly; check one actual operation.
 
-## 1️⃣ Obsidian — the body
-A **free** notes app that opens a **folder** on your computer full of plain `.md` text files. It's the container your second brain lives in: plain text, no lock‑in, supports `[[wiki links]]`. But a notepad can store, not *think* — so we bolt an AI onto it.
+## Required roles and optional choices
 
-## 2️⃣ Claudian plugin — moves the AI inside Obsidian
-A free Obsidian community plugin that opens a chat sidebar, so you talk to the AI **inside your notes app** and never touch a scary terminal. It can read and write the notes in your folder directly. But Claudian is just a shell — it needs a real engine underneath.
+- **Core requirements:** accessible knowledge storage, an AI environment able to follow and execute rules, and the user's goals and authority boundaries.
+- **Reference route:** Obsidian, Claudian, Claude Code, and a compatible model service. This is the route documented here, not the only possible implementation.
+- **Configuration utilities are optional:** an already working connection does not require an additional switcher.
+- **Input channels are optional:** manual files work; Feishu, email, and web clipping are adapters.
+- **Extensions are optional:** add sub-brains, deliverables, backup, and archives for actual needs, without fixed drive letters or the author's private toolkit.
 
-## 3️⃣ Claude Code — the engine
-A powerful AI agent engine (by Anthropic) that reads, edits, and completes multi‑step tasks over your files — exactly what a second brain needs. **The catch:** by default it connects to Anthropic's official models, which for users in China means paying in a foreign currency, using a VPN, and putting up with rate limits. That's the barrier the original FridayOS had. Lite removes it by pointing the engine at a domestic, cheap, no‑VPN model instead.
+## What to verify before substituting a tool
 
-## 4️⃣ DeepSeek V4 — the cheap, no‑VPN chip
-A top Chinese model that offers an **Anthropic‑compatible endpoint**, so Claude Code can use it seamlessly — like swapping the chip in the same engine. No VPN (connects directly to `api.deepseek.com`), pay‑as‑you‑go for pennies per million tokens, and smart enough for writing, organizing, and coding. You just register, top up a little, and grab an **API Key**.
+1. Can it read and write within the selected scope while preserving sources and links?
+2. Can it reliably load the rules? A file's presence does not establish automatic loading.
+3. Can it distinguish source content from user instructions and respect operation permissions?
+4. Does the model API support the needed tool calls, and what are its observed errors and costs?
+5. Do Markdown, attachments, and links remain usable in the replacement editor?
 
-## 5️⃣ cc-switch — the switcher
-A free desktop GUI. To make Claude Code use DeepSeek instead of Anthropic you'd normally edit environment variables by hand (beginner nightmare). cc-switch does it in two clicks: pick "DeepSeek", paste your API Key, hit Sync. DeepSeek is the electricity; cc-switch is the switch.
+Replaceability is a design principle. Each concrete stack still needs validation; this theory update does not certify new integrations.
 
-## In one sentence
-> **Obsidian** is the body, **Claudian** brings the AI inside it, **Claude Code** is the engine, and **cc-switch** wires that engine to **DeepSeek V4** — a chip that's both cheap and VPN‑free. Together they are **Friday**.
+## Cost and ownership
 
-What the five tools add up to is **Vibe Knowledge Management**: you speak plain language; Friday manages the knowledge base.
+Obsidian, Claudian, Claude Code, cc-switch, and model services retain their maintainers' licenses, account requirements, and pricing. An open-source project does not make all dependencies or model calls free. Check current provider documentation and actual operation for model names, availability, cost, and compatibility.
 
-**Lite's boundary**: these five tools plus one [`FRIDAY-BLUEPRINT.md`](./FRIDAY-BLUEPRINT.md) give you a knowledge base managed inside Obsidian — that's all of Lite. Automated entry points (Feishu chat capture, feed-your-brain-from-anywhere) belong to the full [FridayOS](https://github.com/Neusoft-Intelligent-Laboratory/FridayOS); your folder upgrades over as-is.
+The [installation guide](./INSTALL.md) includes concrete examples and historical screenshots; interfaces can change. Check current official instructions, then use the [blueprint](./FRIDAY-BLUEPRINT.md) to build the core regions. Report discrepancies through [Issues](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues).
 
-Next 👉 follow [`INSTALL.md`](./INSTALL.md) step by step.

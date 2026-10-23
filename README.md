@@ -1,104 +1,105 @@
 # FridayOS 1.0
 
-### Start with an AI second brain. Explore a more human-centered Agent OS.
+**English** · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md)
 
-**FridayOS 1.0 is an open-source practice project from [Robinson AI Lab](https://github.com/Robinson-AI-Lab), formerly named FridayOS-Lite.** It continues to evolve from the original knowledge-management practice.
+<picture>
+  <source media="(max-width: 600px)" srcset="./docs/images/six-brain-mobile.svg">
+  <img alt="FridayOS Six-Brain: capture, execution, knowledge, skills, evidence, and regulation" src="./docs/images/six-brain-hero.svg">
+</picture>
 
-Robinson is a public-interest AI research community focused on AI management concepts, practical experiments, and open sharing. FridayOS is our flagship initiative for connecting human knowledge, experience, and action with AI.
+**Give knowledge a structure your AI can work with.**
 
-English · [简体中文](./README.zh-CN.md) · [About the lab](./LAB.md) · [Questions and feedback](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues)
+FridayOS 1.0 is an open-source knowledge-work project built around the **Six-Brain Method**. Inspired by the division of functions in the human brain, it organizes local folders into cooperating regions for sources, knowledge, tasks, and reusable methods. One blueprint helps you start building your own AI second brain.
 
-## What this version provides
-
-Use **Obsidian + Claudian**, local Markdown files, and a brain blueprint to explore AI-assisted personal knowledge management: capturing notes, organizing information, retrieving context, and learning a six-region knowledge structure. Setup guides and a fictional demo provide a practical starting point.
-
-This version focuses on personal knowledge management. A Feishu bot, automated message capture, and a complete set of operational safeguards are outside its current scope. Broader task collaboration and Agent OS capabilities remain ongoing research directions.
-
-By **Agent OS**, we mean a collaboration environment connecting AI agents, knowledge, tools, and tasks. Our aim is to make that environment approachable, understandable, and respectful of human judgment and control.
-
-## Who it is for
-
-People curious about AI who want help remembering, organizing, and finding information, and are willing to follow a guide and share what they learn. Prior software-development experience is not required.
-
-## In three lines
-
-1. **A folder is your brain** — all notes as local plain text, never locked in.
-2. **An AI lives in your notes app** — chat with Friday in Obsidian's sidebar; it captures, organizes, and retrieves.
-3. **You don't build the brain** — download [`FRIDAY-BLUEPRINT.md`](./FRIDAY-BLUEPRINT.md), tell Friday "build from this", and the six regions appear by themselves.
-
-## 💡 This way of working has a name: Vibe Knowledge Management
-
-You've heard of vibe coding — say what you want, the AI writes the code. **Vibe Knowledge Management (VKM)** is the same move applied to knowledge: **drive your knowledge base with natural language, and let the AI do the managing.** You never create folders, tag notes, or fix links by hand. You just talk — capture a stray thought, ask a question, say "the usual" — and filing, linking, and retrieval are Friday's job.
-
-VKM is the core of Friday, and FridayOS 1.0 is its smallest complete form. Fair notice: this is a new way of working — how well it replicates beyond us, and how quickly newcomers internalize it, still needs more users to verify. **That's exactly what this repo is for.**
-
-## 🗺️ How it fits together
-
-![FridayOS 1.0 — five tools, one signal chain](./docs/images/tools-flow.gif)
-
-> Indigo = what you touch; teal = what thinks beneath. See [`TOOLS.md`](./TOOLS.md) for what each tool is and why.
-
-## 🚀 Get started (three steps)
-
-| Order | Read | Do |
-|---|---|---|
-| 1️⃣ Understand | [`TOOLS.md`](./TOOLS.md) | 3 min — what the five tools are for |
-| 2️⃣ Install | [`INSTALL.md`](./INSTALL.md) | Set up the stack, then one sentence builds the brain |
-| 3️⃣ If stuck | [`FAQ.md`](./FAQ.md) | Troubleshooting + download links |
-
-> 👉 **Beginners: go 1→2→3, don't skip.** Understand first, then install.
-
-## 🧠 Your brain after setup
-
-Six regions, fully explained in [`FRIDAY-BLUEPRINT.md`](./FRIDAY-BLUEPRINT.md):
-
-| Region | Folder | In a line |
-|---|---|---|
-| 📥 Inbox | `inbox/` | Capture fast, sort later |
-| 🎯 Workbench | `exec/` | 3–7 things in motion + weekly/daily plans |
-| 📚 Knowledge | `wiki/` | Worth keeping, wikilinked |
-| ⚙️ Skills | `skills/` | Repeated work as routines (advanced) |
-| 📦 Archive | `raw/` | Source material, read-only |
-| 🫀 Core | `system/` | The brain's contract (`CLAUDE.md`) |
-
-## 🎮 Just installed and feeling lost? Play the demo brain
-
-An empty brain is hard to appreciate. We ship a **ready-to-play sandbox** — a fictional 100-person IT company with full employee files, projects, customers, all wikilinked across the six regions, plus 11 demo prompts in three acts for exploring retrieval and cross-file analysis. To play: download [`示例大脑-云栈科技.zip`](./示例大脑-云栈科技.zip) (click the ⬇ download button), unzip, open as a vault, follow the demo manual inside. *(Demo content is Chinese-only.)*
-
-![Demo brain in action](./docs/images/gif/demo-act2.gif)
-
-## 💸 Token-frugal by design
-
-The six regions aren't just tidy — **they're what makes Friday absurdly cheap to run**. Aggregate queries scan structured frontmatter (dozens of tokens per file) instead of whole documents; every domain has an overview map (MOC) so Friday starts from one page, not eleven; questions open only the region they belong to; and routines live in `skills/` once, invoked by name instead of re-explained every time.
-
-Model costs depend on the provider, model, context size, and usage. Evaluate costs using your own usage records and validate results in your environment.
-
-## 📦 Tools you'll install (all free / very cheap)
-
-| Tool | Role | From |
-|---|---|---|
-| Node.js | Foundation | [nodejs.org](https://nodejs.org) |
-| Obsidian | The brain's body (notes app) | [obsidian.md](https://obsidian.md) |
-| Claude Code | Friday's engine (the AI) | npm (China mirror) |
-| cc-switch | Wires the engine to a cheap chip | [ccswitch.io](https://ccswitch.io) |
-| DeepSeek V4 | Cheap, no-VPN model | [platform.deepseek.com](https://platform.deepseek.com) |
-| Claudian | Brings the AI into Obsidian | Obsidian community plugin |
-
-## Star History
-
-![FridayOS 1.0 Star History Chart](./docs/images/star-history.svg)
-
-<sub>Verified observations; collected daily from 2026-08-11. Missing dates are not reconstructed from the current stargazer list.</sub>
-
-## 💬 Stuck?
-
-
-
-
-Bug reports and questions are welcome on the [Issues](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) page.
+**[Understand the method →](./docs/SIX-BRAIN.md)**　 **[Read the blueprint →](./FRIDAY-BLUEPRINT.md)**　 **[Start building →](./INSTALL.md)**
 
 ---
 
-<div align="center">
-<sub>FridayOS 1.0 · One document, one sentence, one brain.</sub>
-</div>
+## Why six regions?
+
+Collected material, active tasks, established understanding, and repeatable methods need different treatment. Friday draws inspiration from brain functions, gives each region a responsibility, and connects them through references and feedback.
+
+**Owen Teng proposed the Six-Brain Method, developed through Friday practice with Robinson AI Lab.** The design connects brain-inspired responsibilities, information flow, and human–AI cooperation. Publicly available tools provide storage, interfaces, and execution.
+
+| Region | Functional inspiration | What it helps you do |
+|---|---|---|
+| **Capture · `inbox/`** | New experience entering memory; a hippocampal-function analogy | Receive ideas and material before choosing their destination |
+| **Execution · `exec/`** | Prefrontal goal maintenance and executive control | Keep track of goals, progress, and next actions |
+| **Knowledge · `wiki/`** | Cortical knowledge and associations | Develop sourced understanding that can be reused |
+| **Skills · `skills/`** | Procedural learning and habit formation | Turn reliable experience into repeatable methods |
+| **Evidence · `raw/`** | An external original-record mechanism | Preserve sources and check the basis of conclusions |
+| **Regulation · `system/`** | An analogy to basic operational regulation | Give AI explicit rules and authority boundaries |
+
+“Brain regions” are design analogies. Biological functions involve cooperating networks, not one-to-one folder equivalents. **[Read the full theory, provenance, and boundaries](./docs/SIX-BRAIN.md)**.
+
+## From one task to the next capability
+
+Take a research brief based on three documents:
+
+1. **Capture and verify:** receive the documents and preserve necessary originals.
+2. **Understand and act:** define the research goal, connect prior knowledge, and record disagreements.
+3. **Deliver and review:** produce the brief; a person checks its sources and conclusions.
+4. **Learn and reuse:** correct knowledge and develop repeatedly validated procedures into skills.
+
+Content moves according to its purpose, without visiting every region. The method aims to support source retrieval, task continuity, and method reuse; evaluate results and cost with your own tasks.
+
+**Vibe Knowledge Management (VKM)** names the interaction style: express goals, queries, and revisions in natural language; AI organizes and executes within its authority, while people retain important judgments.
+
+## A core that can grow with your work
+
+| Extension | Role |
+|---|---|
+| **Sub-brains · `domains/<project>/`** | Scope project or domain context; reference shared knowledge and return reusable findings |
+| **Deliverables · `output/`** | Hold current results for people; feed use feedback into later learning |
+| **Attachments, workspaces, and archives** | Support materials, production work, and historical records at user-chosen locations |
+
+Six regions describe the core division of responsibilities. More folders do not automatically mean more brains. **The current blueprint provisions six core regions; an all-extension deployment package still requires implementation and verification.**
+
+## See it in practice
+
+Explore **Cloudstack**, a fictional company sandbox with people, projects, and customer records, plus 11 prompts for practicing retrieval, connections, and method reuse.
+
+![Fictional demo: retrieving and connecting knowledge to answer questions](./docs/images/gif/demo-act2.gif)
+
+**[Download the demo brain](./示例大脑-云栈科技.zip)** → unzip → open as a separate Obsidian vault → follow its manual to configure the plugin and try the prompts. The demo is in Chinese and uses fictional data. It is not evidence of customer outcomes or integrated extension capabilities.
+
+## Start your Friday
+
+| Your route | Next step |
+|---|---|
+| **Understand the design** | Read the [Six-Brain Method](./docs/SIX-BRAIN.md) |
+| **Build your own** | Read the [tool roles](./TOOLS.md) and [installation guide](./INSTALL.md), then use the [blueprint](./FRIDAY-BLUEPRINT.md) |
+| **Explore first** | Try the [fictional demo](./示例大脑-云栈科技.zip) before choosing your structure |
+| **Get help** | Read the [FAQ](./FAQ.md) or [report an issue](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) |
+
+The reference stack is **Obsidian + Claudian + Claude Code + a compatible model service**. Markdown files hold the knowledge; connection-management utilities are optional. **Feishu is not required:** manually supplied files are enough to begin. Check current models, plugins, pricing, and API compatibility for your environment; alternative stacks are not automatically verified.
+
+### Current scope
+
+- **Provided in this repository:** theory, bilingual blueprints, tool and installation guides, and a fictional demo.
+- **Added in this update:** the brain-functional rationale, sub-brain and deliverable roles, and tool-independent design principles.
+- **Still requiring separate validation:** full extension deployment, automated maintenance, individual tool environments, and newcomer experience.
+
+FridayOS 1.0 focuses on personal knowledge work. A human-friendly Agent OS for work remains an exploration; full task collaboration and game-like product capabilities are not shipped promises of this page.
+
+## Help develop the method
+
+Contribute reproducible issues, use feedback, tutorials, or adapter experience. Include your environment, steps, expected result, and actual result, without private material or credentials.
+
+[Issues and discussion](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) · [MIT license](./LICENSE) · [Owen Teng](https://github.com/Robinson-AI-Lab/.github/blob/main/people/owen-teng.md)
+
+Maintained by **[Robinson AI Lab · 鲁滨逊](https://github.com/Robinson-AI-Lab)**. Formerly FridayOS-Lite. Third-party tools retain their own ownership and licenses.
+
+<details>
+<summary>Project interest over time</summary>
+
+![FridayOS 1.0 Star History](./docs/images/star-history.svg)
+
+Based on collected observations; missing dates are not reconstructed. Interest is a distribution signal, not a measure of practical effectiveness.
+
+</details>
+
+---
+
+**FridayOS 1.0 · Six regions. One blueprint. Your own work.**
+
