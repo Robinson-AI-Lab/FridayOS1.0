@@ -1,0 +1,2 @@
+0e8aba1890cf9804438eec571ac7d93bb5a75937d6e79b8938debfc957ce7574  FridayOS-Blueprint.zip
+b10332ca48d123ee192743143c50d76f6d37607c1027fd20334b97e01dfca8ad  friday_blueprint.py

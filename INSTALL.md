@@ -1,5 +1,7 @@
 # 🛠️ FridayOS‑Lite Install Guide (for beginners)
 
+> **Want to deploy Friday's complete folder structure first?** Use the [offline blueprint package](./docs/DEPLOYMENT.md): preview → create → check, with Python 3.9+ and no model account. The guide below is a historical reference for one optional tool stack; it is not a prerequisite for the blueprint. Product screens and service availability require current verification.
+
 > Just follow the clicks. **~30 minutes total, no coding, no VPN.**
 > Strongly recommended: spend 3 minutes on [`TOOLS.md`](./TOOLS.md) first so each step makes sense.
 >

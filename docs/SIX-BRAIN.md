@@ -163,7 +163,7 @@ Scientific background:
 
 ## 8. What this edition delivers
 
-This update explains the theory, revises the bilingual homepages and tool roles, and adds the rationale inside the blueprints. The current blueprint provisions six core regions. Sub-brains, `output/`, and external archives are described as extensions, not a shipped all-extension installer. Installation, automated organization, and cross-tool compatibility need environment-specific verification.
+The complete offline blueprint package provisions the six core regions, sub-brains, output, attachments and separate work/archive spaces as folders, rules and blank templates; core-only is optional. See the [deployment guide](DEPLOYMENT.md). Scaffolding supports the method without automatically routing material, publishing results, cleaning up or backing up. AI rule loading, model connections, cross-tool compatibility and real-task outcomes still need environment-specific validation.
 
 Start with the [deployment blueprint](../FRIDAY-BLUEPRINT.md), then validate your own Six-Brain workspace with one real task.
 

@@ -11,7 +11,7 @@
 
 FridayOS 1.0 is an open-source knowledge-work project built around the **Six-Brain Method**. Inspired by the division of functions in the human brain, it organizes local folders into cooperating regions for sources, knowledge, tasks, and reusable methods. One blueprint helps you start building your own AI second brain.
 
-**[Understand the method →](./docs/SIX-BRAIN.md)**　 **[Read the blueprint →](./FRIDAY-BLUEPRINT.md)**　 **[Start building →](./INSTALL.md)**
+**[The method →](./docs/SIX-BRAIN.md)**　 **[Download →](https://github.com/Robinson-AI-Lab/FridayOS1.0/raw/refs/heads/main/dist/FridayOS-Blueprint.zip)**　 **[Get started →](./docs/DEPLOYMENT.md)**
 
 ---
 
@@ -53,7 +53,7 @@ Content moves according to its purpose, without visiting every region. The metho
 | **Deliverables · `output/`** | Hold current results for people; feed use feedback into later learning |
 | **Attachments, workspaces, and archives** | Support materials, production work, and historical records at user-chosen locations |
 
-Six regions describe the core division of responsibilities. More folders do not automatically mean more brains. **The current blueprint provisions six core regions; an all-extension deployment package still requires implementation and verification.**
+Six regions describe the core division of responsibilities. More folders do not automatically mean more brains. **The complete blueprint package is available: it provisions the core, sub-brains, deliverables, attachments, and separate work/archive spaces. Core-only is optional.** [See the layout and deployment guide](./docs/DEPLOYMENT.md).
 
 ## See it in practice
 
@@ -68,17 +68,17 @@ Explore **Cloudstack**, a fictional company sandbox with people, projects, and c
 | Your route | Next step |
 |---|---|
 | **Understand the design** | Read the [Six-Brain Method](./docs/SIX-BRAIN.md) |
-| **Build your own** | Read the [tool roles](./TOOLS.md) and [installation guide](./INSTALL.md), then use the [blueprint](./FRIDAY-BLUEPRINT.md) |
+| **Build your own** | [Download the package](https://github.com/Robinson-AI-Lab/FridayOS1.0/raw/refs/heads/main/dist/FridayOS-Blueprint.zip), then [preview, create and check](./docs/DEPLOYMENT.md) |
 | **Explore first** | Try the [fictional demo](./示例大脑-云栈科技.zip) before choosing your structure |
 | **Get help** | Read the [FAQ](./FAQ.md) or [report an issue](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues) |
 
-The reference stack is **Obsidian + Claudian + Claude Code + a compatible model service**. Markdown files hold the knowledge; connection-management utilities are optional. **Feishu is not required:** manually supplied files are enough to begin. Check current models, plugins, pricing, and API compatibility for your environment; alternative stacks are not automatically verified.
+**Deployment needs only Python 3.9+ and works offline after download.** Then choose your environment by [tool role](./TOOLS.md). The existing [tool setup example](./INSTALL.md) uses **Obsidian + Claudian + Claude Code + a compatible model service**. Markdown files hold the knowledge; connection-management utilities are optional. **Feishu is not required:** manually supplied files are enough to begin. Check current models, plugins, pricing, and API compatibility for your environment; alternative stacks are not automatically verified.
 
 ### Current scope
 
-- **Provided in this repository:** theory, bilingual blueprints, tool and installation guides, and a fictional demo.
-- **Added in this update:** the brain-functional rationale, sub-brain and deliverable roles, and tool-independent design principles.
-- **Still requiring separate validation:** full extension deployment, automated maintenance, individual tool environments, and newcomer experience.
+- **Provided:** theory, a complete offline blueprint package, bilingual guides, tool references and a fictional demo.
+- **Deployment acceptance:** Windows checks cover fresh deployment, repeated runs, conflict protection, core expansion and standalone ZIP execution; [see validation scope](./docs/BLUEPRINT-VALIDATION.md).
+- **Separate validation remains:** macOS/Linux devices, AI integrations and newcomer tasks. The package does not perform automatic maintenance, backup or existing-vault migration.
 
 FridayOS 1.0 focuses on personal knowledge work. A human-friendly Agent OS for work remains an exploration; full task collaboration and game-like product capabilities are not shipped promises of this page.
 

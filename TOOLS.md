@@ -59,5 +59,5 @@ Replaceability is a design principle. Each concrete stack still needs validation
 
 Obsidian, Claudian, Claude Code, cc-switch, and model services retain their maintainers' licenses, account requirements, and pricing. An open-source project does not make all dependencies or model calls free. Check current provider documentation and actual operation for model names, availability, cost, and compatibility.
 
-The [installation guide](./INSTALL.md) includes concrete examples and historical screenshots; interfaces can change. Check current official instructions, then use the [blueprint](./FRIDAY-BLUEPRINT.md) to build the core regions. Report discrepancies through [Issues](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues).
+The [installation guide](./INSTALL.md) includes concrete examples and historical screenshots; interfaces can change. To provision folders and guides, use the [offline blueprint package](./docs/DEPLOYMENT.md) with Python 3.9+; choose a model and interface later. Check current official instructions for tool integrations. Report discrepancies through [Issues](https://github.com/Robinson-AI-Lab/FridayOS1.0/issues).
 
